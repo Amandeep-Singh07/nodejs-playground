@@ -2,10 +2,10 @@
 const fs = require('fs'); // fs module imported
 // fs module provides an API for interacting with the file system in a manner closely modeled around standard POSIX functions.
 
-// // Sync write to a file
+// // Sync write to a file (blocking)
 // fs.writeFileSync('example.txt', 'Hello, this is a sample text file.');
 
-// // Assync write to a file
+// // Assync write to a file (non-blocking)
 // fs.writeFile('example_async.txt', 'Hello, this is an async sample text file.', (err) => {
 //     if (err) throw err;
 //     console.log('Async file has been saved!');
@@ -35,3 +35,22 @@ const fs = require('fs'); // fs module imported
 // console.log(fs.statSync('test.txt')); // get file info
 
 // fs.mkdirSync('my-docs'); // create directory
+
+// learning blocking and non-blocking code in Node.js
+
+// blocking...
+// console.log(34);
+// const result=fs.readFileSync('contact.txt','utf8');
+// console.log(result);
+// console.log(1);
+// console.log(1);
+// console.log(1);
+
+// non-blocking...
+// console.log(34);
+// fs.readFile('contact.txt','utf8',(err,result)=>{
+//     console.log(result);
+// });
+// console.log(1);
+// console.log(1);
+// console.log(1);
