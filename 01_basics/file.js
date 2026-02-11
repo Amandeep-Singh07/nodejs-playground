@@ -23,7 +23,7 @@ const fs = require('fs'); // fs module imported
 //     console.log(result);
 // });
 
-// So from the above examples we can see that sync methods can be store the result in a variable directly while async methods require a callback function to handle the result once it's available.
+// So from the above examples we can see that sync methods can store the result in a variable directly while async methods require a callback function to handle the result once it's available.
 
 // // Append to a file
 // fs.appendFileSync('test.txt', '\nAppended text.');

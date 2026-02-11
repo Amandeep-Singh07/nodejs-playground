@@ -1,13 +1,19 @@
-const http = require('http');
+const http = require('http'); // this is a built in module in node.js used to create a server
 const fs = require('fs');
+
+// const myServer = http.createServer((req, res) => {});
+// const myServer = http.createServer((req, res) => {
+//   console.log("New request received");
+//   console.log(req.headers)
+//   console.log(req) // req keyword is used to get the request object from the client side
+//   res.end("Hello from the server");
+// });
 
 const myServer = http.createServer((req, res) => {
     const log = `${new Date().toLocaleString()}: ${req.url} New request received\n`;
     
     fs.appendFile('log.txt', log, (err, data) => {
-    // console.log('Request received');
-    // console.log(req.headers);
-        // res.end("hello from server again");
+        
         switch(req.url) {
             case '/':
                 res.end("Hello from the Home Page");
