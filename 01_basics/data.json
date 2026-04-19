@@ -1,0 +1,10 @@
+{
+    "name": "Amandeep Singh",
+    "role":0,
+    "active":true,
+    "subjects":["os","dbms","cn"],
+    "isTrue":null,
+    "more":{
+        "place":"jalandhar"
+    }
+}
